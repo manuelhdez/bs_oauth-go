@@ -107,7 +107,7 @@ func getAccessToken(at string) (*accessToken, *errors.RestErr) {
 		var apiErr errors.RestErr
 		fmt.Println(response)
 		if err := json.Unmarshal(response.Bytes(), &apiErr); err != nil {
-			return nil, errors.NewInternalServerError("invalid json error interface when trying to get access token")
+			return nil, errors.NewInternalServerError("invalid json error interface when trying to get access token 111")
 		}
 		return nil, &apiErr
 	}
